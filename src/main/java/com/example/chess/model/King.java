@@ -15,8 +15,8 @@ public class King extends Piece{
         if( end.getPiece().getIsWhite() == this.getIsWhite())
             return false;
         else{
-            var x = Math.abs( start.getX() - end.getX());
-            var y = Math.abs(start.getY() - end.getY());
+            int x = Math.abs( start.getX() - end.getX());
+            int y = Math.abs(start.getY() - end.getY());
             return x + y == 1 && isNotCheck(board, start, end) || x == y && y== 1 && isNotCheck(board, start, end);
         }
     }
@@ -26,8 +26,8 @@ public class King extends Piece{
         if( end.getPiece().getIsWhite() == this.getIsWhite())
             return false;
         else{
-            var x = Math.abs( start.getX() - end.getX());
-            var y = Math.abs(start.getY() - end.getY());
+            int x = Math.abs( start.getX() - end.getX());
+            int y = Math.abs(start.getY() - end.getY());
             return x + y == 1 || x == y && y== 1;
         }
     }
